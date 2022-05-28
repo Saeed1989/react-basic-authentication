@@ -1,3 +1,4 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
 .App {
   text-align: center;
 }
@@ -14,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #85a9f0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +36,69 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  color: white;
+}
+
+.main-content {
+  background: white;
+  padding: 24;
+  margin: 0;
+  minheight: 800;
+}
+
+/* antd css */
+
+.login-warp {
+  max-width: 360px;
+  margin: auto;
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("https://gw.alipayobjects.com/zos/rmsportal/itDzjUnkelhQNsycranf.svg");
+  margin-left: 16px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.icon-alipay {
+  background-position: -24px 0;
+}
+
+.icon-alipay:hover {
+  background-position: 0 0;
+}
+
+.icon-taobao {
+  background-position: -24px-24px;
+}
+
+.icon-taobao:hover {
+  background-position: 0-24px;
+}
+
+.icon-weibo {
+  background-position: -24px-48px;
+}
+
+.icon-weibo:hover {
+  background-position: 0-48px;
+}
+
+.loading-wrap {
+  margin: 20px 0;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  text-align: center;
+  /* background: rgba(0, 0, 0, 0.05); */
+  border-radius: 4px;
+}
+
+body {
+  min-height: 100vh;
 }
