@@ -1,4 +1,4 @@
-export const DUMMY_USERS = [
+const getDummyUsers = () => [
   {
     firstName: "Jalal",
     lastName: "Uddin",
@@ -13,3 +13,5 @@ export const DUMMY_USERS = [
     updatedAt: "2021-01-01T00:00:00.000Z",
   },
 ];
+
+module.exports = { getDummyUsers }

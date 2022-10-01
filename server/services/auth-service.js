@@ -1,9 +1,9 @@
-import { DUMMY_USERS } from "../constants/dummy-users";
 
 const bcrypt = require("bcrypt");
+const { getDummyUsers } = require("../constants/dummy-users");
 
 const checkUser = async (username, password) => {
-    let user = DUMMY_USERS.find(user => user.username === username);
+    let user = getDummyUsers.find(user => user.username === username);
 
     if (user) {
       const match = await bcrypt.compare(password, user.passwordHash);

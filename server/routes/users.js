@@ -1,9 +1,11 @@
 var express = require('express');
+const { getUsers } = require('../services/user-services.js');
 var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  const users = getUsers();
+  res.send(users);
 });
 
 module.exports = router;
