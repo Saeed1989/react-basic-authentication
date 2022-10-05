@@ -1,7 +1,9 @@
 const { getDummyUsers } = require("../constants/dummy-users");
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const  getLogInPayload= (req, res) => {
+    console.log(process.env);
     if (req.body.username && req.body.password) {
         let user = checkUser(req.body.username, req.body.password);
         if (user) {
@@ -34,9 +36,9 @@ const  getLogInPayload= (req, res) => {
 }
 
 const checkUser = async (username, password) => {
-    const user = getDummyUsers().find( usr => usr.username === req.body.username);
+    const user = getDummyUsers().find( usr => usr.username === username);
     if (user) {
-      const match = await bcrypt.compare(password, user.passwordHash);
+      const match = await bcrypt .compare(password, user.passwordHash);
       return match ? user : undefined;
     }
   
