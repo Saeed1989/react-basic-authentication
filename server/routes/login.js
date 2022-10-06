@@ -3,9 +3,9 @@ const { getLogInPayload } = require("../services/login-service.js");
 var router = express.Router();
 
 /* GET users listing. */
-router.post("/", function (req, res, next) {
+router.post("/", async (req, res, next) => {
   //console.log(req.body);
-  const payload = getLogInPayload(req);
+  const payload = await getLogInPayload(req);
   if (payload) {
     res.status(200).send(payload);
   } else {
