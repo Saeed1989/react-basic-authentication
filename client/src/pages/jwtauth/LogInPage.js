@@ -41,7 +41,7 @@ export const LogInPage = () => {
   const onLogInClicked = async () => {
     try {
       const response = await axios.post("http://localhost:3000/api/login", {
-        email: emailValue,
+        username: emailValue,
         password: passwordValue,
       });
       const { token } = response.data;
