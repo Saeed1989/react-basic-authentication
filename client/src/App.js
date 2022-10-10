@@ -3,6 +3,7 @@ import "./App.css";
 import { Jwtauth } from "./pages/jwtauth/Jwtauth";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Oauthauth } from "./pages/oauthauth/Oauthauth";
+import { UserProfile } from "./pages/userprofile/userprofile";
 
 export function App() {
   return (
@@ -54,6 +55,9 @@ function RouteContainer() {
         </Route>
         <Route path="/oauth">
           <Oauthauth />
+        </Route>
+        <Route path="/userprofile">
+          <UserProfile />
         </Route>
         <div>
           <nav>

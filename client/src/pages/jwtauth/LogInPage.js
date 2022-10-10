@@ -46,7 +46,7 @@ export const LogInPage = () => {
       });
       const { token } = response.data;
       setToken(token);
-      history.push("/");
+      history.push("/userprofile");
     } catch (e) {
       setErrorMessage(e.message);
     }
