@@ -44,8 +44,8 @@ export const LogInPage = () => {
         username: emailValue,
         password: passwordValue,
       });
-      const { token } = response.data;
-      setToken(token);
+      const { accessToken } = response.data;
+      setToken(accessToken);
       history.push("/userprofile");
     } catch (e) {
       setErrorMessage(e.message);
