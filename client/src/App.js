@@ -4,6 +4,7 @@ import { Jwtauth } from "./pages/jwtauth/Jwtauth";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Oauthauth } from "./pages/oauthauth/Oauthauth";
 import { UserProfile } from "./pages/userprofile/userprofile";
+import { PrivateRoute } from './auth/PrivateRoute';
 
 export function App() {
   return (
@@ -56,9 +57,9 @@ function RouteContainer() {
         <Route path="/oauth">
           <Oauthauth />
         </Route>
-        <Route path="/userprofile">
+        <PrivateRoute path="/userprofile" exact>
           <UserProfile />
-        </Route>
+        </PrivateRoute>
         <div>
           <nav>
             <ul>
